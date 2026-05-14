@@ -22,21 +22,6 @@ const pieces = [
     title: 'A pendant study built around elegant restraint',
     viewer: <PendantViewer />,
   },
-  {
-    accent: 'from-white/30 via-rich-gold/10 to-transparent',
-    description:
-      'This ring closes the sequence with a sharper contemporary profile, balancing minimal presentation with premium material cues and a gallery-like rhythm.',
-    details: ['Optimized canvas', 'Float motion', 'Responsive layout'],
-    eyebrow: 'Modern band',
-    title: 'Contemporary volume with a polished couture finish',
-    viewer: (
-      <FloatingRing
-        accentColor="#f0dec2"
-        modelPath="/OBJ_file_of_ring.obj"
-        targetSize={2.55}
-      />
-    ),
-  },
 ]
 
 function JewelryGallery() {
@@ -54,7 +39,7 @@ function JewelryGallery() {
             id="module-2-collection-heading"
             className="max-w-3xl font-display text-4xl leading-tight text-soft-pearl sm:text-5xl"
           >
-            Three immersive product moments shaped for a premium first impression.
+            Two immersive product moments shaped for a premium first impression.
           </h2>
         </div>
         <p className="max-w-xl text-sm leading-7 text-white/65 sm:text-base">
