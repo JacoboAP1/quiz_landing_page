@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-gray-900;
+  }
+}
+
+@layer components {
+  /* Un "átomo" de botón que todos pueden usar */
+  .btn-gold {
+    @apply bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+}
