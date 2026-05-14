@@ -1,1 +1,100 @@
 @import "tailwindcss";
+
+@theme {
+  --color-obsidian: #050505;
+  --color-nightfall: #0d0a09;
+  --color-antique-gold: #b78a42;
+  --color-rich-gold: #d7b273;
+  --color-champagne: #f0dec2;
+  --color-soft-pearl: #f8f4ee;
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-sans: "Avenir Next", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top, rgba(183, 138, 66, 0.16), transparent 34%),
+      linear-gradient(180deg, #060505 0%, #090707 46%, #050505 100%);
+    color: var(--color-soft-pearl);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .animate-ambient-float {
+    animation: ambient-float 8s ease-in-out infinite;
+  }
+
+  .animate-gold-shift {
+    animation: gold-shift 14s linear infinite;
+    background-size: 200% 200%;
+  }
+
+  .animate-soft-pulse {
+    animation: soft-pulse 4.5s ease-in-out infinite;
+  }
+
+  .animate-reveal {
+    animation: reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes ambient-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0) scale(1.02);
+  }
+}
+
+@keyframes gold-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
