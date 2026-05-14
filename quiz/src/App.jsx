@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import ProductCards from './components/Cards';
-import ContactForm from './components/Contact';
+import Cards from './components/Cards';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
